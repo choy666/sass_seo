@@ -1,0 +1,22 @@
+@import "../base/variables";
+div nav{
+    text-align: center;
+    grid-area: nav;
+    margin: 10px;
+    ul{
+        position: sticky;
+        top: 0;
+        li{
+            a{
+                font-family: 'Pacifico', cursive;
+                font-size: $nav_a-size !important;
+                &:hover{
+                    font-weight: 900;
+                }
+            }
+            .active-bg{
+                background-color: black !important;
+            }
+        }
+    }
+}

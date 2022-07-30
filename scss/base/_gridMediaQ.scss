@@ -1,0 +1,83 @@
+//imports
+@import "./mixins";
+@import "./variables";
+#grid{
+    display: grid;
+    grid-template-areas:
+    "nav header empty"
+    "nav main aside"
+    "nav footer aside";
+    grid-template-columns: 15% 75% auto;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 20px;
+}
+//media queries
+//mobile
+@media (max-width:618px)
+{
+    /* grid */
+    #grid{
+        grid-template-areas:
+        "nav" 
+        "header"
+        "main"
+        "aside"
+        "footer";
+        grid-template-columns: 1;
+        grid-template-rows: auto;
+        //mixin
+        @include flex(column);
+    }
+    div aside{
+        position: sticky;
+        bottom: 0;
+        top: 0;
+        div{
+            .up_down{
+                width: nth($up_down-size,1);
+                margin: 20px;
+            }
+        }
+    }
+
+    .image{
+        height: nth($img_bgCat-sizeH, 1);
+        width: nth($img_bgCat-sizeW, 1);
+    }
+    h1{
+        font-size: nth($h1-size, 1);
+    }
+    h2{
+        font-size: nth($h2-size, 1);
+    }
+}
+/* Tablet */
+@media(min-width:618px) and (max-width:768px)
+{
+    .up_down{
+        width: nth($up_down-size,2);
+    }
+    .image{
+        height: nth($img_bgCat-sizeH, 2);
+        width: nth($img_bgCat-sizeW, 2);
+    }
+    /* txt */
+    h1{
+        font-size: nth($h1-size, 2);
+    }
+
+    h2{
+        font-size: nth($h2-size, 2);
+    }
+}
+/* Desktop */
+@media(min-width:768px)
+{
+    .image{
+        //variables
+        height: nth($img_bgCat-sizeH, 3);
+        width: nth($img_bgCat-sizeW, 3);
+    }
+}

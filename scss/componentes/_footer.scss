@@ -1,0 +1,22 @@
+@import "../base/variables";
+@import "../base/mixins";
+div footer{
+    grid-area: footer;
+    //mixin
+    @include flex(row);
+    justify-content: space-evenly;
+    background-color: $footer-color;
+    border-radius: 20px;
+    div{
+        padding: 10px 7px;
+        p{
+            color: $txtfooter-color;
+        }
+        a{
+            img{
+                width: 25%;
+                margin: 20px;
+            }
+        }
+    }
+}

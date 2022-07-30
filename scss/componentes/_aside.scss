@@ -1,0 +1,17 @@
+@import "../base/variables";
+@import "../base/mixins";
+div aside{
+    grid-area: aside;
+    text-align: center;
+    //mixin
+    @include flex(column);
+    div{
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        .up_down{
+            margin-top: 20px;
+            width: nth($up_down-size,3);
+        }
+    }
+}

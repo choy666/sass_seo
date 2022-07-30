@@ -1,0 +1,9 @@
+//grupo de variables con informacion y variables vacias que luego tendran un valor en especifico, 
+//se invoca el grupo de variable con sus parametros
+//flex
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}

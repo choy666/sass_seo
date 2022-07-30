@@ -1,0 +1,21 @@
+@import "../base/variables";
+@import "../base/mixins";
+div header{
+    grid-area: header;
+    height: max-content;
+    background: $header-color;
+    border: solid 5px rgb(0, 255, 221);
+    text-align: center;
+    border-radius: 20px;
+    //mixin
+    @include flex(row);
+    margin: 20px;
+    a{
+        img{
+            width: $img_logo-size;
+            &:hover{
+                animation: rotate-scale-up 0.65s linear both;
+            }
+        }
+    }
+}

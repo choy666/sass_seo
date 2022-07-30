@@ -1,0 +1,8 @@
+//grupo de variables que podra ser invocada individualmente
+//mainImagen
+$bgContainerImg:(
+    //ruta como si accediera desde style.css
+    bg-imagen: url("../img/background_img.svg"),
+    bg-size:contain,
+    bg-repeat: no-repeat,
+);
